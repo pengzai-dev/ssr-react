@@ -1017,7 +1017,6 @@ export function diffHydratedProperties(
         ensureListeningTo(rootContainerElement, propKey);
       }
     } else if (
-      __DEV__ &&
       // Convince Flow we've calculated it (it's DEV-only in this method.)
       typeof isCustomComponentTag === 'boolean'
     ) {
@@ -1044,7 +1043,7 @@ export function diffHydratedProperties(
           nextHtml != null ? nextHtml : '',
         );
         if (expectedHTML !== serverHTML) {
-          warnForPropDifference(propKey, serverHTML, expectedHTML);
+          __DEV__ && warnForPropDifference(propKey, serverHTML, expectedHTML);
         }
       } else if (propKey === STYLE) {
         // $FlowFixMe - Should be inferred as not undefined.
@@ -1054,7 +1053,7 @@ export function diffHydratedProperties(
           const expectedStyle = createDangerousStringForStyles(nextProp);
           serverValue = domElement.getAttribute('style');
           if (expectedStyle !== serverValue) {
-            warnForPropDifference(propKey, serverValue, expectedStyle);
+            __DEV__ && warnForPropDifference(propKey, serverValue, expectedStyle);
             extPayload.push(propKey);
             extPayload.push(nextProp);
           }
@@ -1065,7 +1064,7 @@ export function diffHydratedProperties(
         serverValue = getValueForAttribute(domElement, propKey, nextProp);
 
         if (nextProp !== serverValue) {
-          warnForPropDifference(propKey, serverValue, nextProp);
+            __DEV__ && warnForPropDifference(propKey, serverValue, nextProp);
         }
       } else if (
         !shouldIgnoreAttribute(propKey, propertyInfo, isCustomComponentTag) &&
@@ -1113,7 +1112,7 @@ export function diffHydratedProperties(
         }
 
         if (nextProp !== serverValue && !isMismatchDueToBadCasing) {
-          warnForPropDifference(propKey, serverValue, nextProp);
+            __DEV__ && warnForPropDifference(propKey, serverValue, nextProp);
           if(propKey === 'class'){
             extPayload.push(propKey);
             extPayload.push(nextProp);
