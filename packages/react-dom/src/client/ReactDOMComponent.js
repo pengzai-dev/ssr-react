@@ -978,6 +978,7 @@ export function diffHydratedProperties(
   }
 
   let updatePayload = null;
+  let extPayload = [];
   for (const propKey in rawProps) {
     if (!rawProps.hasOwnProperty(propKey)) {
       continue;
@@ -1054,6 +1055,8 @@ export function diffHydratedProperties(
           serverValue = domElement.getAttribute('style');
           if (expectedStyle !== serverValue) {
             warnForPropDifference(propKey, serverValue, expectedStyle);
+            extPayload.push(propKey);
+            extPayload.push(expectedStyle);
           }
         }
       } else if (isCustomComponentTag) {
@@ -1111,6 +1114,10 @@ export function diffHydratedProperties(
 
         if (nextProp !== serverValue && !isMismatchDueToBadCasing) {
           warnForPropDifference(propKey, serverValue, nextProp);
+          if(propKey === 'class'){
+            extPayload.push(propKey);
+            extPayload.push(nextProp);
+          }
         }
       }
     }
@@ -1152,7 +1159,9 @@ export function diffHydratedProperties(
       }
       break;
   }
-
+  if(extPayload.length>0){
+      updatePayload = [...(updatePayload || []),...extPayload];
+  }
   return updatePayload;
 }
 
