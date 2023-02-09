@@ -1056,7 +1056,7 @@ export function diffHydratedProperties(
           if (expectedStyle !== serverValue) {
             warnForPropDifference(propKey, serverValue, expectedStyle);
             extPayload.push(propKey);
-            extPayload.push(expectedStyle);
+            extPayload.push(nextProp);
           }
         }
       } else if (isCustomComponentTag) {
