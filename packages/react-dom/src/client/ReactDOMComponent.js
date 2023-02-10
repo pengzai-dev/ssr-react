@@ -875,10 +875,9 @@ export function diffHydratedProperties(
 ): null | Array<mixed> {
   let isCustomComponentTag;
   let extraAttributeNames: Set<string>;
-
+  isCustomComponentTag = isCustomComponent(tag, rawProps);
   if (__DEV__) {
     suppressHydrationWarning = rawProps[SUPPRESS_HYDRATION_WARNING] === true;
-    isCustomComponentTag = isCustomComponent(tag, rawProps);
     validatePropertiesInDevelopment(tag, rawProps);
     if (
       isCustomComponentTag &&
