@@ -46,29 +46,29 @@
       "filename": "react-dom.development.js",
       "bundleType": "UMD_DEV",
       "packageName": "react-dom",
-      "size": 792253,
-      "gzip": 180114
+      "size": 792351,
+      "gzip": 180147
     },
     {
       "filename": "react-dom.production.min.js",
       "bundleType": "UMD_PROD",
       "packageName": "react-dom",
-      "size": 108642,
-      "gzip": 35001
+      "size": 108704,
+      "gzip": 35021
     },
     {
       "filename": "react-dom.development.js",
       "bundleType": "NODE_DEV",
       "packageName": "react-dom",
-      "size": 786728,
-      "gzip": 178575
+      "size": 786826,
+      "gzip": 178608
     },
     {
       "filename": "react-dom.production.min.js",
       "bundleType": "NODE_PROD",
       "packageName": "react-dom",
-      "size": 108739,
-      "gzip": 34457
+      "size": 108784,
+      "gzip": 34471
     },
     {
       "filename": "ReactDOM-dev.js",
@@ -515,15 +515,15 @@
       "filename": "ReactDOM-dev.js",
       "bundleType": "FB_WWW_DEV",
       "packageName": "react-dom",
-      "size": 810326,
-      "gzip": 179843
+      "size": 810457,
+      "gzip": 179885
     },
     {
       "filename": "ReactDOM-prod.js",
       "bundleType": "FB_WWW_PROD",
       "packageName": "react-dom",
-      "size": 331901,
-      "gzip": 60415
+      "size": 332155,
+      "gzip": 60449
     },
     {
       "filename": "ReactTestUtils-dev.js",
@@ -718,8 +718,8 @@
       "filename": "react-dom.profiling.min.js",
       "bundleType": "NODE_PROFILING",
       "packageName": "react-dom",
-      "size": 111874,
-      "gzip": 35314
+      "size": 111945,
+      "gzip": 35334
     },
     {
       "filename": "ReactNativeRenderer-profiling.js",
@@ -767,8 +767,8 @@
       "filename": "ReactDOM-profiling.js",
       "bundleType": "FB_WWW_PROFILING",
       "packageName": "react-dom",
-      "size": 338635,
-      "gzip": 61973
+      "size": 338889,
+      "gzip": 62012
     },
     {
       "filename": "ReactNativeRenderer-profiling.js",
@@ -795,8 +795,8 @@
       "filename": "react-dom.profiling.min.js",
       "bundleType": "UMD_PROFILING",
       "packageName": "react-dom",
-      "size": 111628,
-      "gzip": 35904
+      "size": 111681,
+      "gzip": 35934
     },
     {
       "filename": "scheduler-tracing.development.js",
@@ -1033,64 +1033,64 @@
       "filename": "react-dom-unstable-fire.development.js",
       "bundleType": "UMD_DEV",
       "packageName": "react-dom",
-      "size": 792708,
-      "gzip": 180296
+      "size": 792705,
+      "gzip": 180293
     },
     {
       "filename": "react-dom-unstable-fire.production.min.js",
       "bundleType": "UMD_PROD",
       "packageName": "react-dom",
-      "size": 108046,
-      "gzip": 34821
+      "size": 108719,
+      "gzip": 35030
     },
     {
       "filename": "react-dom-unstable-fire.profiling.min.js",
       "bundleType": "UMD_PROFILING",
       "packageName": "react-dom",
-      "size": 111039,
-      "gzip": 35728
+      "size": 111696,
+      "gzip": 35943
     },
     {
       "filename": "react-dom-unstable-fire.development.js",
       "bundleType": "NODE_DEV",
       "packageName": "react-dom",
-      "size": 787182,
-      "gzip": 178753
+      "size": 787179,
+      "gzip": 178750
     },
     {
       "filename": "react-dom-unstable-fire.production.min.js",
       "bundleType": "NODE_PROD",
       "packageName": "react-dom",
-      "size": 108212,
-      "gzip": 34294
+      "size": 108798,
+      "gzip": 34481
     },
     {
       "filename": "react-dom-unstable-fire.profiling.min.js",
       "bundleType": "NODE_PROFILING",
       "packageName": "react-dom",
-      "size": 111360,
-      "gzip": 35138
+      "size": 111959,
+      "gzip": 35346
     },
     {
       "filename": "ReactFire-dev.js",
       "bundleType": "FB_WWW_DEV",
       "packageName": "react-dom",
-      "size": 809651,
-      "gzip": 179809
+      "size": 809648,
+      "gzip": 179806
     },
     {
       "filename": "ReactFire-prod.js",
       "bundleType": "FB_WWW_PROD",
       "packageName": "react-dom",
-      "size": 318427,
-      "gzip": 57769
+      "size": 320305,
+      "gzip": 58084
     },
     {
       "filename": "ReactFire-profiling.js",
       "bundleType": "FB_WWW_PROFILING",
       "packageName": "react-dom",
-      "size": 325198,
-      "gzip": 59231
+      "size": 327076,
+      "gzip": 59593
     },
     {
       "filename": "jest-mock-scheduler.development.js",

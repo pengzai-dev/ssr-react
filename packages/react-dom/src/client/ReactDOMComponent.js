@@ -1112,8 +1112,14 @@ export function diffHydratedProperties(
 
         if (nextProp !== serverValue && !isMismatchDueToBadCasing) {
             __DEV__ && warnForPropDifference(propKey, serverValue, nextProp);
-            extPayload.push(propKey);
-            extPayload.push(nextProp);
+            if (
+                propKey === 'className' ||
+                propKey.indexOf('app-') > -1 ||
+                propKey.indexOf('data-') > -1
+              ) {
+                extPayload.push(propKey);
+                extPayload.push(nextProp);
+            }
         }
       }
     }
