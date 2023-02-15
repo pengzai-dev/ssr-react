@@ -950,9 +950,8 @@ export function diffHydratedProperties(
   }
 
   assertValidProps(tag, rawProps);
-
+  extraAttributeNames = new Set();
   if (__DEV__) {
-    extraAttributeNames = new Set();
     const attributes = domElement.attributes;
     for (let i = 0; i < attributes.length; i++) {
       const name = attributes[i].name.toLowerCase();
@@ -1048,14 +1047,12 @@ export function diffHydratedProperties(
         // $FlowFixMe - Should be inferred as not undefined.
         extraAttributeNames.delete(propKey);
 
-        if (canDiffStyleForHydrationWarning) {
-          const expectedStyle = createDangerousStringForStyles(nextProp);
-          serverValue = domElement.getAttribute('style');
-          if (expectedStyle !== serverValue) {
+        const expectedStyle = createDangerousStringForStyles(nextProp);
+        serverValue = domElement.getAttribute('style');
+        if (expectedStyle !== serverValue) {
             __DEV__ && warnForPropDifference(propKey, serverValue, expectedStyle);
             extPayload.push(propKey);
             extPayload.push(nextProp);
-          }
         }
       } else if (isCustomComponentTag) {
         // $FlowFixMe - Should be inferred as not undefined.

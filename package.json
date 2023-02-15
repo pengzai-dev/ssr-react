@@ -93,7 +93,8 @@
     "testRegex": "/scripts/jest/dont-run-jest-directly\\.js$"
   },
   "scripts": {
-    "build": "node ./scripts/rollup/build.js",
+    "build": "node ./scripts/rollup/build.js && npm run copy",
+    "copy":"cp -R build/node_modules/react-dom/* ../pingan/mall-core/node_modules/ssr-react-dom/ && cp -R build/node_modules/react-dom/* ../pingan/cms-ssr/packages/ssr-react-dom/",
     "linc": "node ./scripts/tasks/linc.js",
     "lint": "node ./scripts/tasks/eslint.js",
     "lint-build": "node ./scripts/rollup/validate/index.js",
